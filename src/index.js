@@ -3,7 +3,7 @@ const net = require('net');
 const url = require('url');
 
 const TIMEOUT = 30000;
-const PORT = 3128;
+const PORT = 3000;
 
 const server = http.createServer((clientReq, clientRes) => {
   // 解析目标服务器地址（直接使用客户端请求的完整 URL）
@@ -95,3 +95,5 @@ server.on('connect', (req, clientSocket, head) => {
 server.listen(PORT, () => {
   console.log(`全局代理服务器运行在 ${PORT} 端口`);
 });
+
+module.exports = server;
