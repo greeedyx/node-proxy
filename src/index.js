@@ -3,6 +3,7 @@ const net = require('net');
 const url = require('url');
 
 const TIMEOUT = 30000;
+const PORT = 3128;
 
 const server = http.createServer((clientReq, clientRes) => {
   // 解析目标服务器地址（直接使用客户端请求的完整 URL）
@@ -91,11 +92,6 @@ server.on('connect', (req, clientSocket, head) => {
   });
 });
 
-// 启动服务器：仅开发阶段使用，部署到vercel时请注释掉
-// vercel仅需要导出server实例即可，端口默认3000
-// server.listen(3000, () => {
-//   console.log('全局代理服务器运行在 3128 端口');
-// });
-
-// 导出 Server 实例（关键）
-module.exports = server;
+server.listen(PORT, () => {
+  console.log(`全局代理服务器运行在 ${PORT} 端口`);
+});

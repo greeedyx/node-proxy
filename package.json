@@ -2,14 +2,13 @@
   "name": "proxy",
   "version": "1.0.0",
   "description": "",
-  "main": "proxy.js",
+  "main": "src/index.js",
   "scripts": {
-    "dev": "pm2-runtime start proxy.js"
+    "dev": "pm2-runtime start src/index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@vercel/node": "^5.1.14",
     "pm2": "^6.0.5"
   }
 }
