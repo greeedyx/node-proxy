@@ -1,0 +1,14 @@
+{
+  "name": "proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "proxy.js",
+  "scripts": {
+    "dev": "pm2-runtime start proxy.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pm2": "^6.0.5"
+  }
+}
